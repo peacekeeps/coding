@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>navbar</title>
+    <script
+      src="https://kit.fontawesome.com/e2edc3d57c.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #f2f2f2;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+
+      button {
+        font-family: "Roboto", sans-serif;
+        font-size: 1rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+      }
+
+      /*
+        ===============
+        Nav
+        ===============
+        */
+      @media screen and (min-width: 600px) {
+        .nav-box .links-box {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row;
+          position: initial;
+          /* top: 0; */
+          /* width: auto; */
+          height: auto;
+          background-color: white;
+          transition: .3s;
+          z-index: 1;
+        }
+
+        .link-btn {
+        /* display: block; */
+        /* text-align: center; */
+        margin: 0;
+        padding: 1rem;
+        /* width: auto; */
+        transition: background-color .3s;
+      }
+
+        .nav-box .social-box {
+          display: flex;
+          flex-direction: row;
+        }
+
+        .nav-box .menu-btn {
+          display: none;
+        }
+      }
+
+      .nav-box {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+        height: 51px;
+        background-color: white;
+      }
+
+      h1 {
+        letter-spacing: 1.5px;
+        margin: 1rem;
+        align-self: center;
+        user-select: none;
+      }
+
+      .links-box {
+        display: block;
+        position: absolute;
+        top: 51px;
+        height: 0;
+        width: 100%;
+        background-color: white;
+        transition: 0.3s;
+        z-index: -1;
+        overflow: hidden;
+      }
+
+      .nav-box .show-menu {
+        height: 204px;
+        transition: .3s;
+      }
+
+      .link-btn {
+        display: block;
+        text-align: left;
+        margin: 0;
+        padding: 1rem;
+        width: 100%;
+        transition: background-color .3s;
+      }
+
+      .show-menu .link-btn:hover {
+        background-color: #f0f0f0;
+      }
+
+      .link-btn {
+        transition: color 0.3s;
+      }
+
+      .link-btn:hover {
+        color: #717171;
+      }
+
+      .social-box {
+        display: none;
+      }
+
+      .social-btn {
+        margin: 0.5rem;
+        transition: 0.3s;
+      }
+
+      .social-btn:hover {
+        color: #717171;
+      }
+
+      .menu-btn {
+        align-self: center;
+        margin: 1rem;
+        font-size: 1.3rem;
+        transition: 0.3s;
+      }
+
+      .menu-btn:hover {
+        color: #717171;
+        transform: rotate(90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="nav-box">
+        <h1>NavBar</h1>
+        <ul class="links-box">
+          <li>
+            <button class="link-btn"><a href="#">Home</a></button>
+          </li>
+          <li>
+            <button class="link-btn"><a href="#">About</a></button>
+          </li>
+          <li>
+            <button class="link-btn"><a href="#">Projects</a></button>
+          </li>
+          <li>
+            <button class="link-btn"><a href="#">Contact</a></button>
+          </li>
+        </ul>
+        <ul class="social-box">
+          <li>
+            <button class="social-btn">
+              <i class="fa-brands fa-facebook"></i>
+            </button>
+          </li>
+          <li>
+            <button class="social-btn">
+              <i class="fa-brands fa-twitter"></i>
+            </button>
+          </li>
+          <li>
+            <button class="social-btn">
+              <i class="fa-brands fa-linkedin"></i>
+            </button>
+          </li>
+        </ul>
+        <button class="menu-btn"><i class="fa-solid fa-bars"></i></button>
+      </nav>
+    </header>
+    <script src="app.js"></script>
+  </body>
+</html>
