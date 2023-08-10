@@ -1,0 +1,71 @@
+/*
+==========================
+forEach
+==========================
+*/
+
+const numbers = [1, 2, 3, 4, 5]
+
+numbers.forEach((value, index, arr) => {
+    console.log(index, value) //O método forEach aceita 3 parâmetros, o índice, o valor e o array que está sendo iterado
+})
+
+// Para somar todos os valores
+
+let sum = 0
+
+numbers.forEach(value => {
+    sum += value
+})
+
+console.log(sum)
+
+// Para contar ocorrências de um item do array
+
+const letters = ["a", "b", "c", "a", "b", "a", "c", "b"]
+
+let count = {}
+
+letters.forEach(item => {
+    if(count[item]) {
+        count[item]++
+    } else {
+        count[item] = 1
+    }
+})
+
+console.log(count) // => { a: 3, b: 3, c: 2 }
+
+/*
+==========================
+Map: aplica uma função à cada item do array, retornando um N-O-V-O array
+==========================
+*/
+
+// Vamos dobrar os valores do nosso array
+
+const numbers = [1, 2, 3, 4, 5]
+
+numbers.map(double)
+
+const numbersDouble = numbers.map(double)
+
+function double(value, index, arr) {
+    return value * 2
+}
+
+console.log(numbers) // => [ 1, 2, 3, 4, 5 ] !O map() não altera o array sobre o qual ele itera, ele cria um novo array.
+
+console.log(numbersDouble) // => [ 2, 4, 6, 8, 10 ]
+
+// Multiplicando os valores pelo índice
+
+const numbers = [1, 2, 3, 4, 5]
+
+const multipliedNumbers = numbers.map(multiply)
+
+function multiply(value, index, arr) {
+    return value * index
+}
+
+console.log(multipliedNumbers) // => [ 0, 2, 6, 12, 20 ]

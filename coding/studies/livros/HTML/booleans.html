@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const player = prompt("Choose rock, paper or scissors?").toLowerCase().trim();
+        
+        const number = Math.ceil(Math.random() * 3);
+
+        let pc;
+
+        switch(number) 
+        {
+            case 1: 
+                pc = 'rock'; break;
+            case 2:
+                pc = 'paper'; break;
+            case 3:
+                pc = 'scissors';
+        }
+
+        if (player === pc) 
+        {
+            alert(`It was a drawn, both chose ${player}`);
+        } 
+        else if 
+        (
+            player === 'rock' && pc === 'scissors' ||
+            player === 'paper' && pc === 'rock' ||
+            player === 'scissors' && pc === 'paper'
+        ) 
+        {
+            alert(`The player chose ${player} and the computer chose ${pc}. The winner is the player`);
+        }
+        else
+        {
+            alert(`The player chose ${player} and the computer chose ${pc}. The winner is the computer`);
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Layout de Páginas</title>
+    <style>
+        /* The Grid Layout - não é preciso especificar a largura que nem nos outros;
+        */
+        section {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            border: 1px solid black;
+        }
+
+        div {
+            border: 1px solid black;
+            height: 100px;
+            margin: 1rem;
+        }
+
+        /* The flex Layout
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid black;
+        }
+
+        div {
+            border: 2px solid black;
+            margin: 1rem;
+            flex-basis: 25%;
+            height: 100px;
+        }  */
+    
+        /* The Float layout 
+        section {
+            overflow: hidden;
+            border: 1px solid black;
+        }
+
+        div {
+            border: 2px solid black;
+            margin: 1rem;
+            float: left;
+            width: 25%;
+            height: 100px;
+        } 
+        */
+    </style>
+</head>
+<body>
+    <section>
+        <div>product 1</div>
+        <div>product 2</div>
+        <div>product 3</div>
+        <div>product 4</div>
+        <div>product 5</div>
+        <div>product 6</div>
+        <div>product 7</div>
+        <div>product 8</div>
+    </section>
+
+</body>
+</html>
